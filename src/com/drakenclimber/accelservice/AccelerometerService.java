@@ -115,14 +115,12 @@ public class AccelerometerService extends Service implements
     
 
     /** method to handle sensor accuracy */
-    @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
         Log.d(TAG, "onAccuracyChanged: " + sensor + ", accuracy: "
                 + accuracy);
     }
 
     /** method to handle new sensor data */
-    @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             Log.d(TAG, String.format("Accel, x %3.1f, y %3.1f, z %3.1f",
